@@ -437,7 +437,27 @@
   <section id="what-you-can-build" class="in-action-section">
     <div class="container">
       <h2 class="section-title">See it in action.</h2>
-      <p class="section-subtitle">Describe what you want. Watch it get built.</p>
+      <p class="section-subtitle">Click a workflow to watch it stream.</p>
+
+      <!-- Workflow Selector -->
+      <div class="workflow-selector">
+        <button class="workflow-btn active" data-workflow="email">
+          <strong>Email → Draft → Notify</strong>
+          <span>Gmail → responses → Slack</span>
+        </button>
+        <button class="workflow-btn" data-workflow="research">
+          <strong>Research → Organize → Publish</strong>
+          <span>100 articles → blog post</span>
+        </button>
+        <button class="workflow-btn" data-workflow="invoices">
+          <strong>Folder → Process → Output</strong>
+          <span>Invoices → Google Sheets</span>
+        </button>
+        <button class="workflow-btn" data-workflow="videos">
+          <strong>Videos → Transcripts → Notes</strong>
+          <span>200 TikToks → research notes</span>
+        </button>
+      </div>
 
       <!-- Chat Window Demo -->
       <div class="chat-demo-container">
@@ -452,30 +472,8 @@
             <span class="agent-indicator">Claude</span>
           </div>
 
-          <div class="chat-body">
-            <div class="chat-msg user">
-              Check my Gmail every hour. Draft responses to anything that needs a reply. Send me a Slack with everything I need to approve.
-            </div>
-            <div class="chat-msg ai">
-              I'll set that up for you. Connecting to your integrations...
-              <div class="ai-checklist">
-                <div class="check-item done"><span class="check">✓</span> Gmail connected</div>
-                <div class="check-item done"><span class="check">✓</span> Response drafting ready</div>
-                <div class="check-item done"><span class="check">✓</span> Slack integration active</div>
-                <div class="check-item done"><span class="check">✓</span> Scheduled: every hour</div>
-              </div>
-            </div>
-            <div class="chat-msg ai">
-              Running first check now...
-            </div>
-            <div class="chat-msg ai log">
-              <span class="log-time">10:00</span> Found 3 new emails<br>
-              <span class="log-time">10:01</span> Drafted 2 responses<br>
-              <span class="log-time">10:02</span> Sent summary to Slack
-            </div>
-            <div class="chat-msg ai success">
-              ✓ Done. You'll get a Slack message every hour with drafts to approve.
-            </div>
+          <div class="chat-body" id="chat-body">
+            <!-- Content injected by JS -->
           </div>
 
           <div class="chat-input-bar">
@@ -485,32 +483,8 @@
         </div>
       </div>
 
-      <!-- More Examples Grid -->
-      <div class="more-examples">
-        <h3 class="examples-heading">More things you can build:</h3>
-        <div class="examples-grid">
-          <div class="example-item">
-            <strong>Research → Organize → Publish</strong>
-            <span>100 articles → summarized → blog post</span>
-          </div>
-          <div class="example-item">
-            <strong>Folder → Process → Output</strong>
-            <span>Invoices → extracted data → Google Sheets</span>
-          </div>
-          <div class="example-item">
-            <strong>Videos → Transcripts → Notes</strong>
-            <span>200 TikToks → organized research notes</span>
-          </div>
-          <div class="example-item">
-            <strong>Data → Clean → Analyze</strong>
-            <span>CSV files → formatted → insights report</span>
-          </div>
-          <div class="example-item featured">
-            <strong>Your workflow</strong>
-            <span>Describe it. PromptStack builds it.</span>
-          </div>
-        </div>
-      </div>
+      <!-- CTA -->
+      <p class="flow-tagline">Describe it. PromptStack builds it.</p>
 
     </div>
   </section>
