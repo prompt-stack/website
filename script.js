@@ -111,6 +111,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Flow section animation - triggers when scrolled into view
+  const flowWindow = document.querySelector('.flow-window');
+
+  if (flowWindow) {
+    const flowObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Start the animation
+          flowWindow.classList.add('animate');
+
+          // After initial animation completes, add loop class for subtle ongoing animation
+          setTimeout(() => {
+            flowWindow.classList.add('animate-loop');
+          }, 3500);
+
+          flowObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    flowObserver.observe(flowWindow);
+  }
+
   // Preview window tilt on mouse move
   const previewWindow = document.querySelector('.preview-window');
 

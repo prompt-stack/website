@@ -1053,6 +1053,116 @@ img {
   background: rgba(34, 197, 94, 0.1);
 }
 
+/* =================================
+   FLOW ANIMATION KEYFRAMES
+   ================================= */
+
+@keyframes flowFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flowArrowPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes checkAppear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes typeIn {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Animated flow - starts when .animate class is added */
+.flow-window.animate .flow-step {
+  opacity: 0;
+  animation: flowFadeIn 0.5s ease forwards;
+}
+
+.flow-window.animate .flow-step:nth-child(1) { animation-delay: 0s; }
+.flow-window.animate .flow-arrow:nth-of-type(1) { animation-delay: 0.4s; }
+.flow-window.animate .flow-step:nth-child(3) { animation-delay: 0.8s; }
+.flow-window.animate .flow-arrow:nth-of-type(2) { animation-delay: 1.2s; }
+.flow-window.animate .flow-step:nth-child(5) { animation-delay: 1.6s; }
+.flow-window.animate .flow-arrow:nth-of-type(3) { animation-delay: 2.0s; }
+.flow-window.animate .flow-step:nth-child(7) { animation-delay: 2.4s; }
+
+.flow-window.animate .flow-arrow {
+  opacity: 0;
+  animation: flowFadeIn 0.3s ease forwards;
+}
+
+/* Build items animate in sequence */
+.flow-window.animate .build-item {
+  opacity: 0;
+  animation: flowFadeIn 0.3s ease forwards;
+}
+
+.flow-window.animate .build-item:nth-child(1) { animation-delay: 1.0s; }
+.flow-window.animate .build-item:nth-child(2) { animation-delay: 1.2s; }
+.flow-window.animate .build-item:nth-child(3) { animation-delay: 1.4s; }
+.flow-window.animate .build-item:nth-child(4) { animation-delay: 1.6s; }
+
+.flow-window.animate .build-item .check {
+  display: inline-block;
+  animation: checkAppear 0.2s ease forwards;
+}
+
+/* Run logs animate in sequence */
+.flow-window.animate .run-log {
+  opacity: 0;
+  animation: flowFadeIn 0.3s ease forwards;
+}
+
+.flow-window.animate .run-log:nth-child(1) { animation-delay: 1.8s; }
+.flow-window.animate .run-log:nth-child(2) { animation-delay: 2.1s; }
+.flow-window.animate .run-log:nth-child(3) { animation-delay: 2.4s; }
+
+/* Search results animate in */
+.flow-window.animate .search-result {
+  opacity: 0;
+  animation: flowFadeIn 0.3s ease forwards;
+}
+
+.flow-window.animate .search-result:nth-child(1) { animation-delay: 2.6s; }
+.flow-window.animate .search-result:nth-child(2) { animation-delay: 2.8s; }
+.flow-window.animate .search-result:nth-child(3) { animation-delay: 3.0s; }
+
+/* Looping animation for continuous effect */
+.flow-window.animate-loop {
+  animation: none;
+}
+
+.flow-window.animate-loop .flow-arrow {
+  animation: flowArrowPulse 2s ease-in-out infinite;
+}
+
+.flow-window.animate-loop .flow-arrow:nth-of-type(1) { animation-delay: 0s; }
+.flow-window.animate-loop .flow-arrow:nth-of-type(2) { animation-delay: 0.5s; }
+.flow-window.animate-loop .flow-arrow:nth-of-type(3) { animation-delay: 1s; }
+.flow-window.animate-loop .flow-arrow:nth-of-type(4) { animation-delay: 1.5s; }
+
 /* More Examples Grid */
 .more-examples {
   max-width: 800px;
