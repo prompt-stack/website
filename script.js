@@ -111,21 +111,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // App demo animation - triggers when scrolled into view
-  const appWindow = document.querySelector('.app-window');
+  // Chat demo animation - triggers when scrolled into view
+  const chatWindow = document.querySelector('.chat-window');
 
-  if (appWindow) {
-    const appObserver = new IntersectionObserver((entries) => {
+  if (chatWindow) {
+    const chatObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // Start the animation
-          appWindow.classList.add('animate');
-          appObserver.unobserve(entry.target);
+          chatWindow.classList.add('animate');
+          chatObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.3 });
 
-    appObserver.observe(appWindow);
+    chatObserver.observe(chatWindow);
   }
 
   // Preview window tilt on mouse move

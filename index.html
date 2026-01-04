@@ -433,15 +433,15 @@
     </div>
   </section>
 
-  <!-- See It In Action - PromptStack Interface Demo -->
+  <!-- See It In Action - Chat Demo -->
   <section id="what-you-can-build" class="in-action-section">
     <div class="container">
       <h2 class="section-title">See it in action.</h2>
-      <p class="section-subtitle">Describe → Build → Run → Find it later</p>
+      <p class="section-subtitle">Describe what you want. Watch it get built.</p>
 
-      <!-- PromptStack App Window -->
-      <div class="app-demo">
-        <div class="app-window">
+      <!-- Chat Window Demo -->
+      <div class="chat-demo-container">
+        <div class="chat-window">
           <div class="preview-header">
             <div class="preview-dots">
               <span class="dot red"></span>
@@ -449,107 +449,64 @@
               <span class="dot green"></span>
             </div>
             <span class="preview-title">PromptStack</span>
+            <span class="agent-indicator">Claude</span>
           </div>
 
-          <div class="app-content">
-            <!-- Left: File Explorer -->
-            <div class="app-explorer">
-              <div class="panel-header">
-                <span class="panel-title">SESSIONS</span>
-              </div>
-              <div class="session-list">
-                <div class="session-item new">
-                  <span class="session-icon">📋</span>
-                  <span class="session-name">Gmail Auto-Responder</span>
-                  <span class="session-badge">NEW</span>
-                </div>
-                <div class="session-item">
-                  <span class="session-icon">📋</span>
-                  <span class="session-name">Invoice Processor</span>
-                </div>
-                <div class="session-item">
-                  <span class="session-icon">📋</span>
-                  <span class="session-name">TikTok Research</span>
-                </div>
-                <div class="session-item">
-                  <span class="session-icon">📋</span>
-                  <span class="session-name">Weekly Report</span>
-                </div>
+          <div class="chat-body">
+            <div class="chat-msg user">
+              Check my Gmail every hour. Draft responses to anything that needs a reply. Send me a Slack with everything I need to approve.
+            </div>
+            <div class="chat-msg ai">
+              I'll set that up for you. Connecting to your integrations...
+              <div class="ai-checklist">
+                <div class="check-item done"><span class="check">✓</span> Gmail connected</div>
+                <div class="check-item done"><span class="check">✓</span> Response drafting ready</div>
+                <div class="check-item done"><span class="check">✓</span> Slack integration active</div>
+                <div class="check-item done"><span class="check">✓</span> Scheduled: every hour</div>
               </div>
             </div>
+            <div class="chat-msg ai">
+              Running first check now...
+            </div>
+            <div class="chat-msg ai log">
+              <span class="log-time">10:00</span> Found 3 new emails<br>
+              <span class="log-time">10:01</span> Drafted 2 responses<br>
+              <span class="log-time">10:02</span> Sent summary to Slack
+            </div>
+            <div class="chat-msg ai success">
+              ✓ Done. You'll get a Slack message every hour with drafts to approve.
+            </div>
+          </div>
 
-            <!-- Middle: Output Preview -->
-            <div class="app-preview">
-              <div class="panel-header">
-                <span class="panel-title">OUTPUT</span>
-              </div>
-              <div class="output-content">
-                <div class="output-log">
-                  <div class="log-line"><span class="log-time">10:00:01</span> Starting Gmail check...</div>
-                  <div class="log-line"><span class="log-time">10:00:03</span> Found 3 new emails</div>
-                  <div class="log-line"><span class="log-time">10:00:05</span> Analyzing: "Q4 Budget Review"</div>
-                  <div class="log-line"><span class="log-time">10:00:12</span> Draft response created</div>
-                  <div class="log-line"><span class="log-time">10:00:14</span> Analyzing: "Team Standup Notes"</div>
-                  <div class="log-line"><span class="log-time">10:00:18</span> Draft response created</div>
-                  <div class="log-line success"><span class="log-time">10:00:20</span> ✓ Sent summary to Slack</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right: AI Chat -->
-            <div class="app-chat">
-              <div class="panel-header">
-                <span class="panel-title">CLAUDE</span>
-              </div>
-              <div class="chat-messages">
-                <div class="chat-msg user">
-                  Check my Gmail every hour. Draft responses to anything that needs a reply. Send me a Slack with everything I need to approve.
-                </div>
-                <div class="chat-msg ai">
-                  I'll set that up for you. Here's what I'm building:
-                  <div class="ai-checklist">
-                    <div class="check-item done"><span class="check">✓</span> Gmail connected</div>
-                    <div class="check-item done"><span class="check">✓</span> Response drafting</div>
-                    <div class="check-item done"><span class="check">✓</span> Slack notifications</div>
-                    <div class="check-item done"><span class="check">✓</span> Hourly schedule</div>
-                  </div>
-                </div>
-                <div class="chat-msg ai success">
-                  ✓ Running now. First batch sent to Slack.
-                </div>
-              </div>
-              <div class="chat-input-mock">
-                <span class="input-placeholder">Ask anything...</span>
-              </div>
-            </div>
+          <div class="chat-input-bar">
+            <span class="input-placeholder">Ask anything...</span>
+            <span class="input-hint">↵</span>
           </div>
         </div>
       </div>
 
       <!-- More Examples Grid -->
       <div class="more-examples">
-        <h3 class="examples-heading">More automations you can build:</h3>
+        <h3 class="examples-heading">More things you can build:</h3>
         <div class="examples-grid">
           <div class="example-item">
             <strong>Research → Organize → Publish</strong>
-            <span>Files → Blog post → CMS</span>
+            <span>100 articles → summarized → blog post</span>
           </div>
           <div class="example-item">
             <strong>Folder → Process → Output</strong>
-            <span>Invoices → Extract → Sheets</span>
+            <span>Invoices → extracted data → Google Sheets</span>
           </div>
           <div class="example-item">
-            <strong>Videos → Transcripts → Summaries</strong>
-            <span>200 TikToks → Organized notes</span>
+            <strong>Videos → Transcripts → Notes</strong>
+            <span>200 TikToks → organized research notes</span>
           </div>
           <div class="example-item featured">
-            <strong>Your automation</strong>
-            <span>Gmail + Sheets + Slack + Claude + schedule = whatever you need</span>
+            <strong>Your workflow</strong>
+            <span>Describe it. PromptStack builds it.</span>
           </div>
         </div>
       </div>
-
-      <p class="flow-tagline">You describe it. PromptStack builds it. Every session saved.</p>
 
     </div>
   </section>
