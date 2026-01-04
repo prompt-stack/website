@@ -697,11 +697,96 @@ img {
 }
 
 /* =================================
+   WHAT IT IS SECTION
+   ================================= */
+
+.what-it-is {
+  padding: var(--section-padding) 0;
+  background: var(--bg-secondary);
+}
+
+.panels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.panel-card {
+  padding: 32px 24px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.panel-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 12px;
+}
+
+.panel-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.feature-list.centered {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* =================================
+   STACKS INTEGRATIONS SECTION
+   ================================= */
+
+.stacks-integrations {
+  padding: var(--section-padding) 0;
+}
+
+.integrations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.integration-card {
+  padding: 24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: 12px;
+}
+
+.integration-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 8px;
+}
+
+.integration-card p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.integrations-note {
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-body);
+  font-weight: 500;
+}
+
+/* =================================
    STACKS/EXAMPLES SECTION
    ================================= */
 
 .stacks-section {
   padding: var(--section-padding) 0;
+  background: var(--bg-secondary);
 }
 
 .stacks-grid {
@@ -751,6 +836,61 @@ img {
 
 .stacks-cta {
   text-align: center;
+}
+
+/* Automation Examples */
+.automation-examples {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.automation-card {
+  padding: 32px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: 12px;
+}
+
+.automation-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 16px;
+}
+
+.automation-prompt {
+  font-size: 16px;
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  border-left: 3px solid var(--accent);
+}
+
+.automation-description {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.automation-card.featured {
+  background: rgba(34, 197, 94, 0.05);
+  border-color: rgba(34, 197, 94, 0.2);
+  text-align: center;
+}
+
+.automation-card.featured h3 {
+  color: var(--accent);
+}
+
+.automation-tagline {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-top: 12px;
 }
 
 /* =================================
@@ -890,6 +1030,96 @@ img {
 .models-note {
   text-align: center;
   font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* =================================
+   WHO IT'S FOR SECTION
+   ================================= */
+
+.who-its-for {
+  padding: var(--section-padding) 0;
+}
+
+.personas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.persona-card {
+  padding: 24px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-default);
+  border-radius: 12px;
+}
+
+.persona-card p {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.6;
+}
+
+.persona-card strong {
+  color: var(--text-heading);
+}
+
+.personas-tagline {
+  text-align: center;
+  font-size: 18px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* =================================
+   PROOF SECTION
+   ================================= */
+
+.proof-section {
+  padding: var(--section-padding) 0;
+  background: var(--bg-secondary);
+}
+
+.proof-content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.proof-content p {
+  font-size: 18px;
+  color: var(--text-body);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.proof-emphasis {
+  margin-top: 32px !important;
+}
+
+.proof-emphasis strong {
+  font-size: 20px;
+  color: var(--accent);
+}
+
+/* =================================
+   PRICING SECTION
+   ================================= */
+
+.pricing-section {
+  padding: var(--section-padding) 0;
+  text-align: center;
+}
+
+.pricing-details {
+  font-size: 18px;
+  color: var(--text-body);
+  margin-bottom: 12px;
+}
+
+.pricing-note {
+  font-size: 16px;
   color: var(--text-muted);
 }
 
@@ -1102,5 +1332,51 @@ img {
     flex-direction: column;
     gap: 24px;
     text-align: center;
+  }
+
+  .panels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .integrations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .personas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-card {
+    padding: 24px;
+  }
+
+  .proof-content p {
+    font-size: 16px;
+  }
+}
+
+/* Four-step grid layout */
+.steps-grid.four-steps {
+  flex-wrap: wrap;
+}
+
+.steps-grid.four-steps .step-card {
+  min-width: 200px;
+  max-width: 240px;
+}
+
+@media (max-width: 1024px) {
+  .steps-grid.four-steps {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .steps-grid.four-steps .step-card {
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .steps-grid.four-steps .step-arrow-horizontal {
+    transform: rotate(90deg);
   }
 }
