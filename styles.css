@@ -705,6 +705,63 @@ img {
   background: var(--bg-secondary);
 }
 
+/* Video Container */
+.video-container {
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.video-placeholder {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.video-placeholder:hover {
+  border-color: var(--accent);
+  background: var(--bg-popup);
+}
+
+.video-play-btn {
+  width: 80px;
+  height: 80px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg-primary);
+  transition: transform 0.2s;
+}
+
+.video-placeholder:hover .video-play-btn {
+  transform: scale(1.1);
+}
+
+.video-play-btn svg {
+  margin-left: 4px;
+}
+
+.video-label {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.video-container video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border-default);
+}
+
 .panels-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
