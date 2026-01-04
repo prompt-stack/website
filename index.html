@@ -433,15 +433,15 @@
     </div>
   </section>
 
-  <!-- See It In Action - Combined Flow Section -->
+  <!-- See It In Action - PromptStack Interface Demo -->
   <section id="what-you-can-build" class="in-action-section">
     <div class="container">
-      <h2 class="section-title">See the full flow.</h2>
+      <h2 class="section-title">See it in action.</h2>
       <p class="section-subtitle">Describe → Build → Run → Find it later</p>
 
-      <!-- Main Flow Visual -->
-      <div class="flow-demo">
-        <div class="flow-window">
+      <!-- PromptStack App Window -->
+      <div class="app-demo">
+        <div class="app-window">
           <div class="preview-header">
             <div class="preview-dots">
               <span class="dot red"></span>
@@ -451,58 +451,75 @@
             <span class="preview-title">PromptStack</span>
           </div>
 
-          <div class="flow-steps">
-            <!-- Step 1: Describe -->
-            <div class="flow-step">
-              <div class="flow-step-label">1. DESCRIBE</div>
-              <div class="flow-step-content prompt-bubble">
-                "Check my Gmail every hour. Draft responses. Send me a Slack with everything I need to approve."
+          <div class="app-content">
+            <!-- Left: File Explorer -->
+            <div class="app-explorer">
+              <div class="panel-header">
+                <span class="panel-title">SESSIONS</span>
               </div>
-            </div>
-
-            <div class="flow-arrow">↓</div>
-
-            <!-- Step 2: Build -->
-            <div class="flow-step">
-              <div class="flow-step-label">2. BUILD</div>
-              <div class="flow-step-content build-status">
-                <div class="build-item"><span class="check">✓</span> Gmail connected</div>
-                <div class="build-item"><span class="check">✓</span> Claude processing</div>
-                <div class="build-item"><span class="check">✓</span> Slack integration</div>
-                <div class="build-item"><span class="check">✓</span> Scheduled: every hour</div>
-              </div>
-            </div>
-
-            <div class="flow-arrow">↓</div>
-
-            <!-- Step 3: Run -->
-            <div class="flow-step">
-              <div class="flow-step-label">3. RUN</div>
-              <div class="flow-step-content run-status">
-                <div class="run-log">
-                  <span class="timestamp">10:00</span> Checking Gmail... 3 new emails
+              <div class="session-list">
+                <div class="session-item new">
+                  <span class="session-icon">📋</span>
+                  <span class="session-name">Gmail Auto-Responder</span>
+                  <span class="session-badge">NEW</span>
                 </div>
-                <div class="run-log">
-                  <span class="timestamp">10:01</span> Drafting responses...
+                <div class="session-item">
+                  <span class="session-icon">📋</span>
+                  <span class="session-name">Invoice Processor</span>
                 </div>
-                <div class="run-log success">
-                  <span class="timestamp">10:02</span> ✓ Sent to Slack for approval
+                <div class="session-item">
+                  <span class="session-icon">📋</span>
+                  <span class="session-name">TikTok Research</span>
+                </div>
+                <div class="session-item">
+                  <span class="session-icon">📋</span>
+                  <span class="session-name">Weekly Report</span>
                 </div>
               </div>
             </div>
 
-            <div class="flow-arrow">↓</div>
-
-            <!-- Step 4: Find Later -->
-            <div class="flow-step">
-              <div class="flow-step-label">4. FIND IT LATER</div>
-              <div class="flow-step-content search-demo">
-                <div class="search-query">"Find my email automation"</div>
-                <div class="search-results">
-                  <div class="search-result">📋 Gmail Draft Responder <span class="date">Nov 15</span></div>
-                  <div class="search-result">📋 Email Parser <span class="date">Nov 12</span></div>
-                  <div class="search-result active">→ Opening session...</div>
+            <!-- Middle: Output Preview -->
+            <div class="app-preview">
+              <div class="panel-header">
+                <span class="panel-title">OUTPUT</span>
+              </div>
+              <div class="output-content">
+                <div class="output-log">
+                  <div class="log-line"><span class="log-time">10:00:01</span> Starting Gmail check...</div>
+                  <div class="log-line"><span class="log-time">10:00:03</span> Found 3 new emails</div>
+                  <div class="log-line"><span class="log-time">10:00:05</span> Analyzing: "Q4 Budget Review"</div>
+                  <div class="log-line"><span class="log-time">10:00:12</span> Draft response created</div>
+                  <div class="log-line"><span class="log-time">10:00:14</span> Analyzing: "Team Standup Notes"</div>
+                  <div class="log-line"><span class="log-time">10:00:18</span> Draft response created</div>
+                  <div class="log-line success"><span class="log-time">10:00:20</span> ✓ Sent summary to Slack</div>
                 </div>
+              </div>
+            </div>
+
+            <!-- Right: AI Chat -->
+            <div class="app-chat">
+              <div class="panel-header">
+                <span class="panel-title">CLAUDE</span>
+              </div>
+              <div class="chat-messages">
+                <div class="chat-msg user">
+                  Check my Gmail every hour. Draft responses to anything that needs a reply. Send me a Slack with everything I need to approve.
+                </div>
+                <div class="chat-msg ai">
+                  I'll set that up for you. Here's what I'm building:
+                  <div class="ai-checklist">
+                    <div class="check-item done"><span class="check">✓</span> Gmail connected</div>
+                    <div class="check-item done"><span class="check">✓</span> Response drafting</div>
+                    <div class="check-item done"><span class="check">✓</span> Slack notifications</div>
+                    <div class="check-item done"><span class="check">✓</span> Hourly schedule</div>
+                  </div>
+                </div>
+                <div class="chat-msg ai success">
+                  ✓ Running now. First batch sent to Slack.
+                </div>
+              </div>
+              <div class="chat-input-mock">
+                <span class="input-placeholder">Ask anything...</span>
               </div>
             </div>
           </div>

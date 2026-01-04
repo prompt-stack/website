@@ -923,7 +923,7 @@ img {
 }
 
 /* =================================
-   IN ACTION / FLOW SECTION
+   IN ACTION / APP DEMO SECTION
    ================================= */
 
 .in-action-section {
@@ -931,13 +931,13 @@ img {
   background: var(--bg-secondary);
 }
 
-/* Flow Demo Window */
-.flow-demo {
-  max-width: 700px;
+/* App Demo Window - Three Panel Layout */
+.app-demo {
+  max-width: 1000px;
   margin: 0 auto 48px;
 }
 
-.flow-window {
+.app-window {
   background: var(--bg-primary);
   border: 1px solid var(--border-default);
   border-radius: 12px;
@@ -945,121 +945,176 @@ img {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.flow-steps {
-  padding: 24px;
+.app-content {
+  display: grid;
+  grid-template-columns: 200px 1fr 280px;
+  min-height: 380px;
 }
 
-.flow-step {
-  margin-bottom: 8px;
-}
-
-.flow-step-label {
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: var(--accent);
-  margin-bottom: 8px;
-}
-
-.flow-step-content {
-  padding: 16px;
-  background: var(--bg-elevated);
-  border-radius: 8px;
-  font-size: 13px;
-}
-
-.flow-step-content.prompt-bubble {
-  color: var(--text-heading);
-  font-style: italic;
-}
-
-.flow-arrow {
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 18px;
-  padding: 8px 0;
-}
-
-/* Build status */
-.build-status {
+/* Left Panel - Sessions/Explorer */
+.app-explorer {
+  border-right: 1px solid var(--border-default);
   display: flex;
   flex-direction: column;
-  gap: 6px;
 }
 
-.build-item {
-  color: var(--text-body);
+.session-list {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.build-item .check {
-  color: var(--accent);
-  margin-right: 8px;
-}
-
-/* Run status */
-.run-status {
-  font-family: var(--font-mono);
+.session-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
   font-size: 12px;
+  color: var(--text-body);
+  cursor: pointer;
+  transition: background 0.15s;
 }
 
-.run-log {
-  padding: 4px 0;
+.session-item:hover {
+  background: var(--bg-elevated);
+}
+
+.session-item.new {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--text-heading);
+}
+
+.session-icon {
+  font-size: 14px;
+}
+
+.session-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.session-badge {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--accent);
+  background: rgba(34, 197, 94, 0.2);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Middle Panel - Output/Preview */
+.app-preview {
+  background: var(--bg-secondary);
+  display: flex;
+  flex-direction: column;
+}
+
+.output-content {
+  flex: 1;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.output-log {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.log-line {
+  padding: 4px 8px;
+  background: var(--bg-primary);
+  border-radius: 4px;
   color: var(--text-muted);
 }
 
-.run-log .timestamp {
+.log-line .log-time {
   color: var(--text-body);
   margin-right: 12px;
 }
 
-.run-log.success {
-  color: var(--accent);
-}
-
-/* Search demo */
-.search-demo {
-  font-size: 13px;
-}
-
-.search-query {
-  color: var(--text-heading);
-  margin-bottom: 12px;
-  font-style: italic;
-}
-
-.search-results {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.search-result {
-  padding: 8px 12px;
-  background: var(--bg-primary);
-  border-radius: 6px;
-  color: var(--text-body);
-  display: flex;
-  justify-content: space-between;
-}
-
-.search-result .date {
-  color: var(--text-muted);
-  font-size: 11px;
-}
-
-.search-result.active {
+.log-line.success {
   color: var(--accent);
   background: rgba(34, 197, 94, 0.1);
 }
 
+/* Right Panel - Chat */
+.app-chat {
+  border-left: 1px solid var(--border-default);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+}
+
+.chat-msg {
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.chat-msg.user {
+  background: var(--bg-elevated);
+  color: var(--text-heading);
+  align-self: flex-end;
+  max-width: 95%;
+}
+
+.chat-msg.ai {
+  background: rgba(34, 197, 94, 0.08);
+  color: var(--text-body);
+  align-self: flex-start;
+  max-width: 95%;
+}
+
+.chat-msg.ai.success {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.ai-checklist {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.check-item {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.check-item.done {
+  color: var(--text-body);
+}
+
+.check-item .check {
+  color: var(--accent);
+  margin-right: 6px;
+}
+
 /* =================================
-   FLOW ANIMATION KEYFRAMES
+   APP DEMO ANIMATIONS
    ================================= */
 
-@keyframes flowFadeIn {
+@keyframes appFadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -1067,12 +1122,7 @@ img {
   }
 }
 
-@keyframes flowArrowPulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
-
-@keyframes checkAppear {
+@keyframes checkPop {
   from {
     opacity: 0;
     transform: scale(0);
@@ -1083,84 +1133,86 @@ img {
   }
 }
 
-@keyframes typeIn {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-@keyframes cursorBlink {
+@keyframes newPulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  50% { opacity: 0.6; }
 }
 
-/* Animated flow - starts when .animate class is added */
-.flow-window.animate .flow-step {
+/* Animate when in view */
+.app-window.animate .chat-msg {
   opacity: 0;
-  animation: flowFadeIn 0.5s ease forwards;
+  animation: appFadeIn 0.4s ease forwards;
 }
 
-.flow-window.animate .flow-step:nth-child(1) { animation-delay: 0s; }
-.flow-window.animate .flow-arrow:nth-of-type(1) { animation-delay: 0.4s; }
-.flow-window.animate .flow-step:nth-child(3) { animation-delay: 0.8s; }
-.flow-window.animate .flow-arrow:nth-of-type(2) { animation-delay: 1.2s; }
-.flow-window.animate .flow-step:nth-child(5) { animation-delay: 1.6s; }
-.flow-window.animate .flow-arrow:nth-of-type(3) { animation-delay: 2.0s; }
-.flow-window.animate .flow-step:nth-child(7) { animation-delay: 2.4s; }
+.app-window.animate .chat-msg:nth-child(1) { animation-delay: 0.2s; }
+.app-window.animate .chat-msg:nth-child(2) { animation-delay: 0.8s; }
+.app-window.animate .chat-msg:nth-child(3) { animation-delay: 2.0s; }
 
-.flow-window.animate .flow-arrow {
+.app-window.animate .check-item {
   opacity: 0;
-  animation: flowFadeIn 0.3s ease forwards;
+  animation: appFadeIn 0.3s ease forwards;
 }
 
-/* Build items animate in sequence */
-.flow-window.animate .build-item {
+.app-window.animate .check-item:nth-child(1) { animation-delay: 1.0s; }
+.app-window.animate .check-item:nth-child(2) { animation-delay: 1.2s; }
+.app-window.animate .check-item:nth-child(3) { animation-delay: 1.4s; }
+.app-window.animate .check-item:nth-child(4) { animation-delay: 1.6s; }
+
+.app-window.animate .log-line {
   opacity: 0;
-  animation: flowFadeIn 0.3s ease forwards;
+  animation: appFadeIn 0.25s ease forwards;
 }
 
-.flow-window.animate .build-item:nth-child(1) { animation-delay: 1.0s; }
-.flow-window.animate .build-item:nth-child(2) { animation-delay: 1.2s; }
-.flow-window.animate .build-item:nth-child(3) { animation-delay: 1.4s; }
-.flow-window.animate .build-item:nth-child(4) { animation-delay: 1.6s; }
+.app-window.animate .log-line:nth-child(1) { animation-delay: 1.8s; }
+.app-window.animate .log-line:nth-child(2) { animation-delay: 2.0s; }
+.app-window.animate .log-line:nth-child(3) { animation-delay: 2.2s; }
+.app-window.animate .log-line:nth-child(4) { animation-delay: 2.4s; }
+.app-window.animate .log-line:nth-child(5) { animation-delay: 2.6s; }
+.app-window.animate .log-line:nth-child(6) { animation-delay: 2.8s; }
+.app-window.animate .log-line:nth-child(7) { animation-delay: 3.0s; }
 
-.flow-window.animate .build-item .check {
-  display: inline-block;
-  animation: checkAppear 0.2s ease forwards;
-}
-
-/* Run logs animate in sequence */
-.flow-window.animate .run-log {
+.app-window.animate .session-item.new {
   opacity: 0;
-  animation: flowFadeIn 0.3s ease forwards;
+  animation: appFadeIn 0.4s ease forwards;
+  animation-delay: 2.2s;
 }
 
-.flow-window.animate .run-log:nth-child(1) { animation-delay: 1.8s; }
-.flow-window.animate .run-log:nth-child(2) { animation-delay: 2.1s; }
-.flow-window.animate .run-log:nth-child(3) { animation-delay: 2.4s; }
-
-/* Search results animate in */
-.flow-window.animate .search-result {
-  opacity: 0;
-  animation: flowFadeIn 0.3s ease forwards;
+.app-window.animate .session-item.new .session-badge {
+  animation: newPulse 1.5s ease-in-out infinite;
+  animation-delay: 2.6s;
 }
 
-.flow-window.animate .search-result:nth-child(1) { animation-delay: 2.6s; }
-.flow-window.animate .search-result:nth-child(2) { animation-delay: 2.8s; }
-.flow-window.animate .search-result:nth-child(3) { animation-delay: 3.0s; }
+/* Responsive */
+@media (max-width: 900px) {
+  .app-content {
+    grid-template-columns: 1fr;
+  }
 
-/* Looping animation for continuous effect */
-.flow-window.animate-loop {
-  animation: none;
+  .app-explorer {
+    border-right: none;
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  .app-preview {
+    min-height: 200px;
+  }
+
+  .app-chat {
+    border-left: none;
+    border-top: 1px solid var(--border-default);
+  }
+
+  .session-list {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .session-item {
+    flex-shrink: 0;
+  }
 }
-
-.flow-window.animate-loop .flow-arrow {
-  animation: flowArrowPulse 2s ease-in-out infinite;
-}
-
-.flow-window.animate-loop .flow-arrow:nth-of-type(1) { animation-delay: 0s; }
-.flow-window.animate-loop .flow-arrow:nth-of-type(2) { animation-delay: 0.5s; }
-.flow-window.animate-loop .flow-arrow:nth-of-type(3) { animation-delay: 1s; }
-.flow-window.animate-loop .flow-arrow:nth-of-type(4) { animation-delay: 1.5s; }
 
 /* More Examples Grid */
 .more-examples {

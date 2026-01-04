@@ -111,27 +111,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Flow section animation - triggers when scrolled into view
-  const flowWindow = document.querySelector('.flow-window');
+  // App demo animation - triggers when scrolled into view
+  const appWindow = document.querySelector('.app-window');
 
-  if (flowWindow) {
-    const flowObserver = new IntersectionObserver((entries) => {
+  if (appWindow) {
+    const appObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           // Start the animation
-          flowWindow.classList.add('animate');
-
-          // After initial animation completes, add loop class for subtle ongoing animation
-          setTimeout(() => {
-            flowWindow.classList.add('animate-loop');
-          }, 3500);
-
-          flowObserver.unobserve(entry.target);
+          appWindow.classList.add('animate');
+          appObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.3 });
 
-    flowObserver.observe(flowWindow);
+    appObserver.observe(appWindow);
   }
 
   // Preview window tilt on mouse move
