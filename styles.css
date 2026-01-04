@@ -971,7 +971,6 @@ img {
 .flow-step-content.prompt-bubble {
   color: var(--text-heading);
   font-style: italic;
-  border-left: 3px solid var(--accent);
 }
 
 .flow-arrow {
