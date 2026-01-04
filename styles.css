@@ -923,79 +923,202 @@ img {
 }
 
 /* =================================
-   STACKS/EXAMPLES SECTION
+   IN ACTION / FLOW SECTION
    ================================= */
 
-.stacks-section {
+.in-action-section {
   padding: var(--section-padding) 0;
   background: var(--bg-secondary);
 }
 
-.stacks-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-bottom: 48px;
+/* Flow Demo Window */
+.flow-demo {
+  max-width: 700px;
+  margin: 0 auto 48px;
 }
 
-.stack-card {
-  padding: 24px;
-  background: var(--bg-secondary);
+.flow-window {
+  background: var(--bg-primary);
   border: 1px solid var(--border-default);
   border-radius: 12px;
-  transition: all 0.2s;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
-.stack-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
+.flow-steps {
+  padding: 24px;
 }
 
-.stack-icon {
-  width: 48px;
-  height: 48px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(34, 197, 94, 0.1);
-  border-radius: 10px;
-  margin-bottom: 16px;
-  color: var(--accent);
-}
-
-.stack-card h3 {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-heading);
+.flow-step {
   margin-bottom: 8px;
 }
 
-.stack-card p {
-  font-size: 14px;
-  color: var(--text-muted);
-  line-height: 1.6;
+.flow-step-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+  margin-bottom: 8px;
 }
 
-.stacks-cta {
+.flow-step-content {
+  padding: 16px;
+  background: var(--bg-elevated);
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.flow-step-content.prompt-bubble {
+  color: var(--text-heading);
+  font-style: italic;
+  border-left: 3px solid var(--accent);
+}
+
+.flow-arrow {
   text-align: center;
+  color: var(--text-muted);
+  font-size: 18px;
+  padding: 8px 0;
 }
 
-/* Automation Examples */
-.automation-examples {
+/* Build status */
+.build-status {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 6px;
+}
+
+.build-item {
+  color: var(--text-body);
+}
+
+.build-item .check {
+  color: var(--accent);
+  margin-right: 8px;
+}
+
+/* Run status */
+.run-status {
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.run-log {
+  padding: 4px 0;
+  color: var(--text-muted);
+}
+
+.run-log .timestamp {
+  color: var(--text-body);
+  margin-right: 12px;
+}
+
+.run-log.success {
+  color: var(--accent);
+}
+
+/* Search demo */
+.search-demo {
+  font-size: 13px;
+}
+
+.search-query {
+  color: var(--text-heading);
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.search-result {
+  padding: 8px 12px;
+  background: var(--bg-primary);
+  border-radius: 6px;
+  color: var(--text-body);
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-result .date {
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.search-result.active {
+  color: var(--accent);
+  background: rgba(34, 197, 94, 0.1);
+}
+
+/* More Examples Grid */
+.more-examples {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.automation-card {
-  padding: 32px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border-default);
-  border-radius: 12px;
+.examples-heading {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 500;
 }
 
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.example-item {
+  padding: 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.example-item strong {
+  color: var(--text-heading);
+  font-size: 14px;
+}
+
+.example-item span {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.example-item.featured {
+  grid-column: span 2;
+  text-align: center;
+  border-color: var(--accent);
+  background: rgba(34, 197, 94, 0.05);
+}
+
+.flow-tagline {
+  text-align: center;
+  font-size: 18px;
+  color: var(--text-heading);
+  margin-top: 32px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .examples-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .example-item.featured {
+    grid-column: span 1;
+  }
+}
+
+/* Legacy - keeping for compatibility */
 .automation-card h3 {
   font-size: 20px;
   font-weight: 600;

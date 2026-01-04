@@ -433,127 +433,107 @@
     </div>
   </section>
 
-  <!-- What You Can Build Section -->
-  <section id="what-you-can-build" class="stacks-section">
+  <!-- See It In Action - Combined Flow Section -->
+  <section id="what-you-can-build" class="in-action-section">
     <div class="container">
-      <h2 class="section-title">Real examples. Real automations.</h2>
+      <h2 class="section-title">See the full flow.</h2>
+      <p class="section-subtitle">Describe → Build → Run → Find it later</p>
 
-      <div class="automation-examples">
-        <div class="automation-card">
-          <h3>Email → Draft → Approve</h3>
-          <p class="automation-prompt">"Check my Gmail every hour. Draft responses. Send me a Slack with everything I need to approve."</p>
-          <p class="automation-description"><strong>What it does:</strong> Connects Gmail + Claude + Slack. Runs on schedule. You approve, it sends.</p>
-        </div>
+      <!-- Main Flow Visual -->
+      <div class="flow-demo">
+        <div class="flow-window">
+          <div class="preview-header">
+            <div class="preview-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="preview-title">PromptStack</span>
+          </div>
 
-        <div class="automation-card">
-          <h3>Research → Organize → Publish</h3>
-          <p class="automation-prompt">"Read these 4 files, write a blog post, push it to my CMS."</p>
-          <p class="automation-description"><strong>What it does:</strong> Pulls context from your files. Writes the post. Publishes where you want it.</p>
-        </div>
-
-        <div class="automation-card">
-          <h3>Folder → Process → Output</h3>
-          <p class="automation-prompt">"Watch this folder. When invoices land, extract the data, add to my spreadsheet."</p>
-          <p class="automation-description"><strong>What it does:</strong> File watcher + extraction + Google Sheets. Runs automatically.</p>
-        </div>
-
-        <div class="automation-card">
-          <h3>Videos → Transcripts → Summaries</h3>
-          <p class="automation-prompt">"I have 200 TikToks. Pull transcripts, summarize each, organize by topic."</p>
-          <p class="automation-description"><strong>What it does:</strong> Batch processing. Content extraction. Organized output.</p>
-        </div>
-
-        <div class="automation-card featured">
-          <h3>The automation you haven't thought of yet</h3>
-          <p class="automation-description">Gmail + Sheets + Slack + Claude + your files + a schedule = whatever you need.</p>
-          <p class="automation-tagline">You describe it. PromptStack builds it.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Session Management Section -->
-  <section class="file-access">
-    <div class="container">
-      <div class="file-access-content">
-        <div class="file-access-text">
-          <h2>Every conversation.<br>Searchable. Yours.</h2>
-          <ul class="feature-list">
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
-              All sessions saved locally
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
-              Full-text search across every chat
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
-              Reference one session from another
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
-              Context pills — drag files into any conversation
-            </li>
-            <li>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="20 6 9 17 4 12"/>
-              </svg>
-              Never lose a workflow again
-            </li>
-          </ul>
-        </div>
-        <div class="file-access-demo">
-          <div class="terminal-window">
-            <div class="terminal-header">
-              <div class="preview-dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
+          <div class="flow-steps">
+            <!-- Step 1: Describe -->
+            <div class="flow-step">
+              <div class="flow-step-label">1. DESCRIBE</div>
+              <div class="flow-step-content prompt-bubble">
+                "Check my Gmail every hour. Draft responses. Send me a Slack with everything I need to approve."
               </div>
             </div>
-            <div class="terminal-content">
-              <div class="terminal-line prompt">"Find my conversation about the invoice parser"</div>
-              <div class="terminal-line output">
-                <svg class="terminal-prefix" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
-                </svg>
-                Found 3 sessions matching "invoice"
+
+            <div class="flow-arrow">↓</div>
+
+            <!-- Step 2: Build -->
+            <div class="flow-step">
+              <div class="flow-step-label">2. BUILD</div>
+              <div class="flow-step-content build-status">
+                <div class="build-item"><span class="check">✓</span> Gmail connected</div>
+                <div class="build-item"><span class="check">✓</span> Claude processing</div>
+                <div class="build-item"><span class="check">✓</span> Slack integration</div>
+                <div class="build-item"><span class="check">✓</span> Scheduled: every hour</div>
               </div>
-              <div class="terminal-line output">
-                <svg class="terminal-prefix" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
-                </svg>
-                "Invoice PDF Parser" - Nov 15
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <!-- Step 3: Run -->
+            <div class="flow-step">
+              <div class="flow-step-label">3. RUN</div>
+              <div class="flow-step-content run-status">
+                <div class="run-log">
+                  <span class="timestamp">10:00</span> Checking Gmail... 3 new emails
+                </div>
+                <div class="run-log">
+                  <span class="timestamp">10:01</span> Drafting responses...
+                </div>
+                <div class="run-log success">
+                  <span class="timestamp">10:02</span> ✓ Sent to Slack for approval
+                </div>
               </div>
-              <div class="terminal-line output">
-                <svg class="terminal-prefix" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
-                </svg>
-                "Receipt Organizer" - Nov 12
-              </div>
-              <div class="terminal-line output success">
-                <svg class="terminal-prefix" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-                Opening "Invoice PDF Parser"...
+            </div>
+
+            <div class="flow-arrow">↓</div>
+
+            <!-- Step 4: Find Later -->
+            <div class="flow-step">
+              <div class="flow-step-label">4. FIND IT LATER</div>
+              <div class="flow-step-content search-demo">
+                <div class="search-query">"Find my email automation"</div>
+                <div class="search-results">
+                  <div class="search-result">📋 Gmail Draft Responder <span class="date">Nov 15</span></div>
+                  <div class="search-result">📋 Email Parser <span class="date">Nov 12</span></div>
+                  <div class="search-result active">→ Opening session...</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- More Examples Grid -->
+      <div class="more-examples">
+        <h3 class="examples-heading">More automations you can build:</h3>
+        <div class="examples-grid">
+          <div class="example-item">
+            <strong>Research → Organize → Publish</strong>
+            <span>Files → Blog post → CMS</span>
+          </div>
+          <div class="example-item">
+            <strong>Folder → Process → Output</strong>
+            <span>Invoices → Extract → Sheets</span>
+          </div>
+          <div class="example-item">
+            <strong>Videos → Transcripts → Summaries</strong>
+            <span>200 TikToks → Organized notes</span>
+          </div>
+          <div class="example-item featured">
+            <strong>Your automation</strong>
+            <span>Gmail + Sheets + Slack + Claude + schedule = whatever you need</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="flow-tagline">You describe it. PromptStack builds it. Every session saved.</p>
+
     </div>
   </section>
 
