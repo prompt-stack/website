@@ -738,6 +738,148 @@ img {
   margin: 0 auto;
 }
 
+/* What It Is - Three Panel Preview */
+.what-it-is-preview {
+  max-width: 900px;
+  margin: 0 auto 48px;
+}
+
+.what-it-is-preview .preview-content.three-panels {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  min-height: 280px;
+}
+
+.panel-section {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-default);
+}
+
+.panel-section:last-child {
+  border-right: none;
+}
+
+.panel-section.middle {
+  background: var(--bg-primary);
+}
+
+.panel-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.panel-demo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.panel-caption {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
+/* Explorer demo */
+.demo-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  color: var(--text-body);
+  border-radius: 4px;
+}
+
+.demo-item:hover {
+  background: var(--bg-elevated);
+}
+
+.demo-item.sub {
+  padding-left: 24px;
+}
+
+.folder-icon, .file-icon {
+  font-size: 14px;
+}
+
+/* Preview demo - diagram */
+.preview-demo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-diagram {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.diagram-node {
+  padding: 8px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  font-size: 12px;
+  color: var(--accent);
+}
+
+.diagram-arrow {
+  color: var(--text-muted);
+  font-size: 16px;
+}
+
+/* Chat demo */
+.chat-demo {
+  gap: 8px;
+}
+
+.chat-bubble {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  max-width: 90%;
+}
+
+.chat-bubble.user {
+  background: var(--bg-elevated);
+  color: var(--text-heading);
+  align-self: flex-end;
+}
+
+.chat-bubble.ai {
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--text-body);
+  align-self: flex-start;
+}
+
+.chat-bubble.ai.success {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .what-it-is-preview .preview-content.three-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .panel-section {
+    border-right: none;
+    border-bottom: 1px solid var(--border-default);
+  }
+
+  .panel-section:last-child {
+    border-bottom: none;
+  }
+}
+
 /* =================================
    STACKS INTEGRATIONS SECTION
    ================================= */
